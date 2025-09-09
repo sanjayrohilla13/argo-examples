@@ -1,5 +1,5 @@
 resources:
-  - deployment.yaml
+  - sonarqube-deployment.yaml
   - sonarqube-service.yaml
   - pvc.yaml
   - postgres-deployment.yaml
