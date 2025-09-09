@@ -24,6 +24,13 @@ spec:
               value: sonarqube
           ports:
             - containerPort: 5432
+          resources:
+            requests:
+              memory: "16Mi" 
+              cpu: "50m"    # 500milliCPUs (1/2 CPU)
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
           volumeMounts:
             - name: postgres-pvc
               mountPath: /var/lib/postgresql/data
