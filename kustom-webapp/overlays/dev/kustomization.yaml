@@ -2,8 +2,18 @@ bases:
 - ../../base
 
 #patchesStrategicMerge:
+# - replicas.yaml
 patches:
- - replicas.yaml
+  - target:
+      kind: Deployment
+      name: webapp
+    patch: |
+      - op: replace
+        path: /spec/replicas
+        value: 6
+#      - op: replace
+#        path: /spec/template/spec/containers/0/image
+#        value: nginx:1.21
 
 configMapGenerator:
 - name: mykustom-map
