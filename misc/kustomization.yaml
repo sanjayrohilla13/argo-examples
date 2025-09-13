@@ -1,0 +1,2 @@
+resources:
+  - pod-with-sidecar.yaml
